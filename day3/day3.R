@@ -1,4 +1,5 @@
 library(readr)
+library(stringr)
 
 data <- readLines("input-2020-3")
 l <- nchar(data[1])
