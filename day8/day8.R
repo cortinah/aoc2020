@@ -5,7 +5,7 @@ run <- function(data) {
   repeat {
     inst = data[row,1]
     if (row %in% ran) break()
-    ran = c(ran,row)
+    ran = c(ran, row)
     if (inst=='nop') acc=acc+0
     if (inst=='acc') acc=acc+data[row,2]
     if (inst=='jmp') row=row+data[row,2] else row=row+1
@@ -18,9 +18,9 @@ run(data)
 run <- function(data) {
   acc = 0; ran = numeric(); row = 1
   repeat {
-    inst=data[row,1]
+    inst = data[row,1]
     if (row %in% ran) break()
-    ran=c(ran,row)
+    ran = c(ran,row)
     if (inst=='nop') acc=acc+0
     if (inst=='acc') acc=acc+data[row,2]
     if (inst=='jmp') row=row+data[row,2] else row=row+1
